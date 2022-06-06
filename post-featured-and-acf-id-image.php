@@ -19,11 +19,11 @@
 
 <!-- ACF IMAGE ID -->
 
-<?php $imageAcf = get_sub_field('image'); 
+<?php $imageAcf = get_field('image'); 
 
  $imageAcf_alt = get_post_meta($imageAcf, '_wp_attachment_image_alt', true)
 
-if(!empty($pizzaMenuTopImg)) :  ?>
+if(!empty($imageAcf)) :  ?>
 
 <img class="thumbnail" <?php awesome_acf_responsive_image($imageAcf,'thumbnail','400px'); ?> alt="<?php echo $imageAcf_alt; ?>"/>  
 
